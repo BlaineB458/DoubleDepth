@@ -16,7 +16,7 @@ const app = express();
 
 const connect = async () => {
     try{
-        await mongoose.connect('mongodb+srv://dally:wPPVFPbYV0R79r0V@double-depth-react.prdno4p.mongodb.net/?retryWrites=true&w=majority',{
+        await mongoose.connect(process.env.MONGO_URL,{
             useNewUrlParser: true,
             useUnifiedTopology: true,
           });
