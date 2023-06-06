@@ -1,0 +1,29 @@
+g path {
+    stroke: rgba(0, 0, 0, 0.3); 
+    stroke-width: 5px;
+    stroke-dasharray: 235.5 440;
+    transform-origin: center center;
+    transform: scale(0.98);
+    transform-box: fill-box;
+  }
+
+  svg g image{
+    transform: rotate(-22deg);
+}
+
+  
+  g text {
+    font-weight: 700;
+    stroke: black;
+    }
+  
+    g:hover {
+    cursor: pointer;
+  }
+  
+  g:hover path {
+    fill: white;
+    transition: all 0.2s ease-in-out;
+    stroke-width: 0;
+  }
+  
