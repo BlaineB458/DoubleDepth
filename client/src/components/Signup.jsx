@@ -28,7 +28,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/register",
+        "https://double-depth.onrender.com/register",
         {
           ...inputValue,
         },

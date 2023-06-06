@@ -21,7 +21,7 @@ const App = () => {
 
   const authenticateUser = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/authStatus', { withCredentials: true })
+      const response = await axios.get('https://double-depth.onrender.com/authStatus', { withCredentials: true })
       const userPayload = response.data.token.id;
       const isAdmin = response.data.user.isAdmin;
 

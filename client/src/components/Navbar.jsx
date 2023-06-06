@@ -18,7 +18,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try{
 
-      await axios.get('http://localhost:3000/logout', {withCredentials:true})
+      await axios.get('https://double-depth.onrender.com/logout', {withCredentials:true})
       dispatch(logout());
       navigate('/');
     }catch(err){

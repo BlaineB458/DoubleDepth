@@ -28,7 +28,7 @@ const Form = () => {
 
       console.log(formData);
   
-      axios.post('http://localhost:3000/api/project', formData, config)
+      axios.post('https://double-depth.onrender.com/api/project', formData, config)
         .then((response) => {
           console.log('Portfolio created:', response.data);
           // Handle success
