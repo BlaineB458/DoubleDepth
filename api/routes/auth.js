@@ -36,6 +36,7 @@ router.post('/register', loginLimiter, async (req, res) => {
       path: '/',
       sameSite: 'lax',
       httpOnly: true,
+      secure: true
     }).json(other);
 
   }catch(err){
@@ -65,7 +66,8 @@ router.post('/login', loginLimiter, async (req, res) => {
           expires,
           path: '/',
           sameSite: 'lax',
-          httpOnly: true });
+          httpOnly: true,
+        secure: true });
         res.status(200).json(other);
       }else{
         return res.status(401).json('Invalid Password')
@@ -102,7 +104,7 @@ router.get('/authStatus', (req, res) => {
 router.get('/logout', (req, res) => {
   // Set token to none and expire after 5 seconds
   console.log('logout attempt')
-  res.clearCookie('jwtToken', { httpOnly: true, path: '/' }).status(200).send('Logged out successfully');
+  res.clearCookie('jwtToken', { httpOnly: true, path: '/', secure:true }).status(200).send('Logged out successfully');
 
 }
 )
