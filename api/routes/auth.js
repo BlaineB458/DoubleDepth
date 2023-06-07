@@ -104,7 +104,7 @@ router.get('/authStatus', (req, res) => {
 router.get('/logout', (req, res) => {
   // Set token to none and expire after 5 seconds
   console.log('logout attempt')
-  res.clearCookie('jwtToken', { httpOnly: true, path: '/', secure:true }).status(200).send('Logged out successfully');
+  res.clearCookie('jwtToken', { httpOnly: true, path: '/', secure:true, sameSite: 'none' }).status(200).send('Logged out successfully');
 
 }
 )
