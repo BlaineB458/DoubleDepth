@@ -60,7 +60,7 @@ app.use(cors({
 app.use(authRoutes);
 app.use('/admin', userVerification, projectRoutes);
 
-app.listen(3000, () => {
+app.listen(8081, () => {
     connect();
-    console.log('Server is running on port 3000');
+    console.log('Server is running on port 8081');
 })
