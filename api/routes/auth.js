@@ -36,7 +36,7 @@ router.post('/register', loginLimiter, async (req, res) => {
       path: '/',
       sameSite: 'none',
       httpOnly: true,
-      secure: true
+      secure: true,
     }).json(other);
 
   }catch(err){

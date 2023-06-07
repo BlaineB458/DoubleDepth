@@ -10,12 +10,13 @@ const Hero = () => {
     <section className='flex justify-center items-start w-full h-[110vh]' >
         <div className='flex mt-40 min-w-[80%] justify-between'>
             <div className='w-full'>
-                 <h1 className='text-[80px] font-black '>The Full Suite</h1>
-                 <h1 className='bg-clip-text text-transparent bg-gradient-to-r from-[#42baff] to-[#0689d5] inline-block text-[60px] font-black -mt-4 drop-shadow-[#42baff]'>Digital Arsenal</h1>
-                 <p className='mt-4 font-medium text-zinc-100/75'>Poise yourself for any business venture with our digital solutions</p>
+                <img src="/doubledepth6.png" alt="" className='h-[200px] -ml-4'/>
+                 <h1 className='text-[40px] font-black -mt-4 drop-shadow-[#42baff] text-zinc-100'>Multimedia Specialists</h1>
+                 <p className='mt-2 font-extralight text-zinc-100/75'>Develop. Deploy. Detonate.</p>
 
-                 <a href="">
-                    <button className='bg-[#0689d5] hover:bg-[#0689d5]/[.75] rounded-full px-6 py-2 font-bold text-white mt-16'>Get Started</button>
+                 <a href="" className='flex justify-center items-center max-w-[150px] mt-16 -z-10'>
+                      <p className='text-zinc-100 font-bold'>Contact</p>
+                      <img src="/bestbubble.png" alt="" className='h-20 w-[150px] hover:scale-[105%] scale-100 transition-all duration-700 absolute' />
                  </a>
 
             </div>

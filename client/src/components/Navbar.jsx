@@ -28,12 +28,11 @@ const Navbar = () => {
 
 
   return (
-    <div className='flex justify-center w-full backdrop-blur-sm top-0 fixed'>
+    <div className='flex justify-center w-full backdrop-blur-sm top-0 fixed z-10'>
        <nav className='min-w-[80%] flex py-6 justify-between items-center '>
       <NavLink to={'/'} >
       <div className="flex items-center justify-center">
-         <img src="/DoubleDepthLogo.png" alt="double depth logo" className='h-[32px] w-[32px] mr-2'/>
-         <h1 className='font-black text-[20px]'>Double Depth</h1>
+         <img src="/logo.png" alt="double depth logo" className='h-[50px] w-[50px] mr-2'/>
       </div>
 
         </NavLink>

@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Bouleverser';
+  src: url('./fonts/Bouleverser.ttf') format('truetype');
+  /* Add additional font properties if needed */
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -14,5 +20,8 @@
 }
 
 html{
-  background: #09090b;
+  background: url('/bgnew.png')no-repeat;
+background-size: cover;
+min-height: 400vh;
+
 }

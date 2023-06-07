@@ -31,8 +31,9 @@ const Signup = () => {
         "https://double-depth.onrender.com/register",
         {
           ...inputValue,
-        },
-        { withCredentials: true }
+        },{
+          withCredentials: true
+        }
       );
       dispatch(setAuthStatus({id: data._id, admin: data.isAdmin}))
         navigate('/');

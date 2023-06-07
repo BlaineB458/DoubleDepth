@@ -31,8 +31,9 @@ const Login = () => {
         try {
           const { data } = await axios.post(
             "https://double-depth.onrender.com/login",
-            { ...inputValue },
-            { withCredentials: true }
+            { ...inputValue },{
+              withCredentials: true
+            }
           );
           console.log(data);
           dispatch(setAuthStatus({id: data._id, admin: data.isAdmin}))
