@@ -34,7 +34,7 @@ router.post('/register', loginLimiter, async (req, res) => {
     res.status(200).cookie("jwtToken", token, {
       expires,
       path: '/',
-      sameSite: 'lax',
+      sameSite: 'none',
       httpOnly: true,
       secure: true
     }).json(other);
@@ -65,7 +65,7 @@ router.post('/login', loginLimiter, async (req, res) => {
         res.cookie('jwtToken', token, {
           expires,
           path: '/',
-          sameSite: 'lax',
+          sameSite: 'none',
           httpOnly: true,
         secure: true });
         res.status(200).json(other);
