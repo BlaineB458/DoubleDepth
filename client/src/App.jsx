@@ -42,6 +42,7 @@ const App = () => {
 
   return (
     <>
+    <div className='w-screen h-[400vh] backdrop-blur-[10px] fixed -z-20'></div>
     <Navbar/>
     <Routes>
         <Route path='/' element={<Home/>} />

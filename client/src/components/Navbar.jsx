@@ -26,17 +26,59 @@ const Navbar = () => {
     }
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
 
   return (
-    <div className='flex justify-center w-full backdrop-blur-sm top-0 fixed z-10'>
+    <div className='flex justify-center w-full backdrop-blur-sm top-0 fixed z-30'>
        <nav className='min-w-[80%] flex py-6 justify-between items-center '>
       <NavLink to={'/'} >
       <div className="flex items-center justify-center">
          <img src="/logo.png" alt="double depth logo" className='h-[50px] w-[50px] mr-2'/>
       </div>
+      </NavLink>
 
-        </NavLink>
-      <ul className='flex flex-row items-center justify-center'>
+      <div className="flex md:hidden">
+        <button
+          type="button"
+          className="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300"
+          onClick={toggleMenu}
+        >
+          <svg
+            className={`h-6 w-6 ${isOpen ? 'hidden' : 'block'}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            className={`h-6 w-6 ${isOpen ? 'block' : 'hidden'}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+
+      <ul className='hidden md:block md:flex flex-row items-center justify-center'>
         <li className='ml-8'>
 
             <NavLink to={'/services'} className="text-[14px] font-extrabold hover:text-gray-600 hover:cursor-pointer">Services</NavLink>
@@ -80,6 +122,24 @@ const Navbar = () => {
 
 
     </nav>
+      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} flex flex-col min-h-20 absolute bg-gradient-to-t from-zinc-100/30 to-zinc-100/10 border-zinc-100/50 shadow-md border-b-[1px] border-t-[.5px] min-w-[80%] rounded-3xl mt-[98px] z-20 pt-10`}>
+        <aside>
+          <ul className='flex flex-col justify-center items-center'>
+            <li className='mb-6 font-bold text-lg w-full'><a href="" className='flex flex-row items-center justify-center'><p>Home</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <path d="M6 16l8-8-8-8" />
+</svg></a></li>
+            <li className='mb-6 font-bold text-lg flex'><a href="" className='flex flex-row items-center justify-center'><p>Home</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <path d="M6 16l8-8-8-8" />
+</svg></a></li>
+            <li className='mb-6 font-bold text-lg flex'><a href="" className='flex flex-row items-center justify-center'><p>Home</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <path d="M6 16l8-8-8-8" />
+</svg></a></li>
+          </ul>
+
+
+        </aside>
+
+      </div>
     </div>
       
       

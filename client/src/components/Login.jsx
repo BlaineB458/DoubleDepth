@@ -55,7 +55,7 @@ const Login = () => {
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col mb-4">
               <label htmlFor="email" className="font-extrabold mb-2">Email</label>
-              <input className="bg-zinc-800/50 rounded-full px-6 py-2 focus:outline-none focus:stroke-none text-sm"
+              <input className="bg-zinc-800/50 rounded-full px-6 py-2 focus:outline-none focus:stroke-none text-xs"
                 type="email"
                 name="email"
                 value={email}
@@ -65,7 +65,7 @@ const Login = () => {
             </div>
             <div className="flex flex-col mb-4">
               <label htmlFor="password" className="font-extrabold mb-2">Password</label>
-              <input className="bg-zinc-800/50 rounded-full px-6 py-2 focus:outline-none focus:stroke-none text-sm"
+              <input className="bg-zinc-800/50 rounded-full px-6 py-2 focus:outline-none focus:stroke-none text-xs"
                 type="password"
                 name="password"
                 value={password}

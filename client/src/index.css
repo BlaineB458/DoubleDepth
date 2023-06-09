@@ -20,8 +20,14 @@
 }
 
 html{
-  background: url('/bgnew.png')no-repeat;
-background-size: cover;
-min-height: 400vh;
+  background: url('/mobilelessgrain.webp')no-repeat;
+  background-size: cover;
+  min-height: 200vh;
+  
+}
 
+@media (min-width: 767px) {
+  html{
+    background: url('/terml.webp')no-repeat;
+  }
 }
