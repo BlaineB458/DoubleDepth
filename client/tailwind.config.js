@@ -5,6 +5,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'Bouleverser': ['Bouleverser', 'sans'],
+    },
   },
   plugins: [],
 }

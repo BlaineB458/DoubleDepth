@@ -34,11 +34,11 @@ const Navbar = () => {
 
 
   return (
-    <div className='flex justify-center w-full backdrop-blur-sm top-0 fixed z-30'>
-       <nav className='min-w-[80%] flex py-6 justify-between items-center '>
+    <div className='flex justify-center w-full top-0 fixed z-30 backdrop-blur-[3px]'>
+       <nav className='min-w-[80%] flex py-2 justify-between items-center '>
       <NavLink to={'/'} >
       <div className="flex items-center justify-center">
-         <img src="/logo.png" alt="double depth logo" className='h-[50px] w-[50px] mr-2'/>
+         <img src="/pnglogo.png" alt="double depth logo" className='h-[50px] w-[50px] mr-2'/>
       </div>
       </NavLink>
 
@@ -81,14 +81,16 @@ const Navbar = () => {
       <ul className='hidden md:block md:flex flex-row items-center justify-center'>
         <li className='ml-8'>
 
-            <NavLink to={'/services'} className="text-[14px] font-extrabold hover:text-gray-600 hover:cursor-pointer">Services</NavLink>
+            <NavLink to={'/services'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>Services</p></NavLink>
+            
 
         </li>
         <li className='ml-8'>
-        <NavLink to={'/work'} className="text-[14px] font-extrabold hover:text-gray-600 hover:cursor-pointer">Work</NavLink>
+        <NavLink to={'/work'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>Work</p></NavLink>
+       
         </li>
         <li className='ml-8'>  
-        <NavLink to={'/about'} className="text-[14px] font-extrabold hover:text-gray-600 hover:cursor-pointer">About</NavLink>
+        <NavLink to={'/about'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>About</p></NavLink>
 
         </li>
         <li className='ml-8'>

@@ -42,7 +42,7 @@ const App = () => {
 
   return (
     <>
-    <div className='w-screen h-[400vh] backdrop-blur-[10px] fixed -z-20'></div>
+    <img src="/thermfat.png" alt="" className='absolute -z-20 h-[400vh] w-full blur-[5px]'/>
     <Navbar/>
     <Routes>
         <Route path='/' element={<Home/>} />

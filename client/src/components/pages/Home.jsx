@@ -7,6 +7,7 @@ const Home = () => {
     <>
     <Hero/>
     <HomeServices/>
+    <img src="/pnglogo.png" alt="" className='h-[100px]' />
     </>
   )
 }

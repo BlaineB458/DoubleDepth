@@ -20,14 +20,14 @@
 }
 
 html{
-  background: url('/mobilelessgrain.webp')no-repeat;
+
+  background-color: #09090b;
   background-size: cover;
   min-height: 200vh;
-  
 }
 
 @media (min-width: 767px) {
   html{
-    background: url('/terml.webp')no-repeat;
+    background-color: #09090b;
   }
 }
