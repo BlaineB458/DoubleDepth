@@ -37,7 +37,7 @@ mongoose.connection.on('connected', () => {
 
 app.use(cookieParser());
 app.use(cors({
-    origin: 'doubledepth.org',
+    origin: 'https://www.doubledepth.org',
     credentials: true,
   }));
 
