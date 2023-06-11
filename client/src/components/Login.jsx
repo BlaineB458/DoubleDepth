@@ -32,7 +32,7 @@ const Login = () => {
           const { data } = await axios.post(
             "https://double-depth.onrender.com/login",
             { ...inputValue },{
-              withCredentials: true
+              withCredentials: true,
             }
           );
           console.log(data);
