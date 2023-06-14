@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'framer-motion'
 
 const HomeServices = () => {
   return (
@@ -8,24 +9,27 @@ const HomeServices = () => {
     <div className='grid w-full grid-rows-3 md:grid-cols-3 gap-8 md:min-h-[30vh] h-screen'>
         
    
-    <div className='flex flex-col items-start justify-center w-full h-full  bg-zinc-700/40 rounded-3xl p-8 backdrop-blur-sm hover:scale-[105%] scale-100 transition-all duration-300'>
+    <motion.div className='flex flex-col items-start justify-center w-full h-full  bg-zinc-700/40 rounded-3xl p-8 backdrop-blur-sm' whileHover={{ scale: [null, 1.05] }}
+      transition={{ duration: 0.3 }}>
                     <div className="flex justify-between items-center w-full ">
                     <h1 className='text-[60px] select-none font-black text-zinc-100/10'>01</h1>
                     </div>
                     <h1 className='text-md font-extrabold'>DEVELOP</h1>
-                </div>
-    <div className='flex flex-col items-start justify-center w-full h-full bg-zinc-700/40 rounded-3xl p-8 backdrop-blur-sm hover:scale-[105%] scale-100 transition-all duration-300'>
+                </motion.div>
+    <motion.div className='flex flex-col items-start justify-center w-full h-full bg-zinc-700/40 rounded-3xl p-8 backdrop-blur-sm'  whileHover={{ scale: [null, 1.05] }}
+      transition={{ duration: 0.3 }}>
     <div className="flex justify-between items-center w-full ">
                     <h1 className='text-[60px] select-none font-black text-zinc-100/10'>02</h1>
                     </div>
                     <h1 className='text-md font-extrabold'>DEPLOY</h1>
-                </div>
-    <div className='flex flex-col items-start justify-center w-full h-full bg-zinc-700/40 rounded-3xl p-8 backdrop-blur-sm hover:scale-[105%] scale-100 transition-all duration-300'>
+                </motion.div>
+    <motion.div className='flex flex-col items-start justify-center w-full h-full bg-zinc-700/40 rounded-3xl p-8 backdrop-blur-sm' whileHover={{ scale: [null, 1.05] }}
+      transition={{ duration: 0.3 }}>
     <div className="flex justify-between items-center w-full ">
                     <h1 className='text-[60px] select-none font-black text-zinc-100/10'>03</h1>
                     </div>
                     <h1 className='text-md font-extrabold'>DETONATE</h1>
-                </div>
+                </motion.div>
     </div>
 
         </div>

@@ -7,6 +7,7 @@ import { logout } from '../redux/userSlice';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+
 const Navbar = () => {
   const auth = useSelector((state) => state.user);
 
@@ -38,7 +39,7 @@ const Navbar = () => {
        <nav className='min-w-[80%] flex py-2 justify-between items-center '>
       <NavLink to={'/'} >
       <div className="flex items-center justify-center">
-         <img src="/pnglogo.png" alt="double depth logo" className='h-[50px] w-[50px] mr-2'/>
+         <img src="/pnglogo.png" alt="double depth logo" className='h-[50px] mr-2'/>
       </div>
       </NavLink>
 
@@ -88,10 +89,6 @@ const Navbar = () => {
         <li className='ml-8'>
         <NavLink to={'/work'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>Work</p></NavLink>
        
-        </li>
-        <li className='ml-8'>  
-        <NavLink to={'/about'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>About</p></NavLink>
-
         </li>
         <li className='ml-8'>
            {!auth ?          

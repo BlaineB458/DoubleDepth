@@ -6,7 +6,6 @@ import { Home, Services, Work, Auth, AuthProject } from './components/pages'
 import { Navigate, Route, Routes} from 'react-router-dom'
 import { login, setAuthStatus } from './redux/userSlice';
 import { useDispatch } from 'react-redux';
-import AuthChecker from './components/AuthChecker.jsx'
 
 const App = () => {
 
@@ -42,7 +41,6 @@ const App = () => {
 
   return (
     <>
-    <img src="/thermfat.png" alt="" className='absolute -z-20 h-[400vh] w-full blur-[5px]'/>
     <Navbar/>
     <Routes>
         <Route path='/' element={<Home/>} />
