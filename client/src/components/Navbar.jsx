@@ -79,7 +79,7 @@ const Navbar = () => {
       </div>
 
 
-      <ul className='hidden md:block md:flex flex-row items-center justify-center'>
+      <ul className='hidden md:block md:flex items-center justify-center'>
         <li className='ml-8'>
 
             <NavLink to={'/services'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>Services</p></NavLink>
