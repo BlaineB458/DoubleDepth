@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Login, Navbar } from './components/index.js'
+import { Footer, Login, Navbar } from './components/index.js'
 import { Home, Services, Work, Auth, AuthProject } from './components/pages'
 import { Navigate, Route, Routes} from 'react-router-dom'
 import { login, setAuthStatus } from './redux/userSlice';
@@ -40,7 +40,7 @@ const App = () => {
   }
 
   return (
-    <>
+    <div className='overflow-hidden relative'>
     <Navbar/>
     <Routes>
         <Route path='/' element={<Home/>} />
@@ -52,7 +52,8 @@ const App = () => {
         element={ admin ? <AuthProject/> : <Navigate to='/work'/>}/>
         <Route path="*" element={<Home />} />
     </Routes>
-    </>
+    <Footer/>
+    </div>
   )
 }
 

@@ -35,9 +35,9 @@ const Navbar = () => {
 
 
   return (
-    <div className='flex justify-center w-full top-0 fixed z-30 backdrop-blur-[3px]'>
-       <nav className='min-w-[80%] flex py-2 justify-between items-center '>
-      <NavLink to={'/'} >
+    <div className={`flex justify-center w-full items-center top-0 fixed p-2 z-30 backdrop-blur-[3px] ${isOpen ? 'flex-col':'flex-row'}`}>
+       <nav className={`min-w-[80%] flex py-2 ${isOpen ? 'justify-end':'justify-between'} items-center`} >
+      <NavLink to={'/'} className={`${isOpen ? 'hidden' : 'block'}`} >
       <div className="flex items-center justify-center">
          <img src="/pnglogo.png" alt="double depth logo" className='h-[50px] mr-2'/>
       </div>
@@ -121,16 +121,19 @@ const Navbar = () => {
 
 
     </nav>
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} flex flex-col min-h-20 absolute bg-gradient-to-t from-zinc-100/30 to-zinc-100/10 border-zinc-100/50 shadow-md border-b-[1px] border-t-[.5px] min-w-[80%] rounded-3xl mt-[98px] z-20 pt-10`}>
+      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} flex flex-col min-h-[30vh] justify-around backdrop-blur-3xl top-0 w-screen z-40`}>
         <aside>
-          <ul className='flex flex-col justify-center items-center'>
-            <li className='mb-6 font-bold text-lg w-full'><a href="" className='flex flex-row items-center justify-center'><p>Home</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <ul className='flex flex-col justify-center items-center h-full'>
+            <li className='mb-6 font-bold text-lg w-full'><a href="/" className='flex flex-row items-center justify-center'><p>Home</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
 </svg></a></li>
-            <li className='mb-6 font-bold text-lg flex'><a href="" className='flex flex-row items-center justify-center'><p>Home</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <li className='mb-6 font-bold text-lg w-full'><a href="/services" className='flex flex-row items-center justify-center'><p>Services</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
 </svg></a></li>
-            <li className='mb-6 font-bold text-lg flex'><a href="" className='flex flex-row items-center justify-center'><p>Home</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <li className='mb-6 font-bold text-lg flex'><a href="/work" className='flex flex-row items-center justify-center'><p>Work</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <path d="M6 16l8-8-8-8" />
+</svg></a></li>
+            <li className='mt-6 font-bold text-base flex'><a href="/auth" className='flex flex-row items-center justify-center'><p>Login</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
 </svg></a></li>
           </ul>

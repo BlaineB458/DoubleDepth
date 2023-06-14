@@ -8,11 +8,11 @@ const Home = () => {
   let y = useTransform(scrollYProgress, [0,1], ['-0%','-60%']);
 
   return (
-    <>
+    <div className='pb-80'>
      <motion.img src="/thermfat.png" alt="" className='absolute -z-20 min-h-[850vh] md:min-h-[600vh] w-full blur-[5px]'  style={{y}} />
     <Hero/>
     <HomeServices/>
-    </>
+    </div>
   )
 }
 
