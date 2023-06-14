@@ -124,18 +124,22 @@ const Navbar = () => {
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} flex flex-col min-h-[30vh] justify-around backdrop-blur-3xl top-0 w-screen z-40`}>
         <aside>
           <ul className='flex flex-col justify-center items-center h-full'>
-            <li className='mb-6 font-bold text-lg w-full'><Navlink to={"/"} className='flex flex-row items-center justify-center'><p>Home</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <li className='mb-6 font-bold text-lg w-full'><Navlink to={'/'} className='flex flex-row items-center justify-center'>
+              <p>Home</p>
+              <svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
-</svg></Navlink></li>
-            <li className='mb-6 font-bold text-lg w-full'><Navlink to={"/services"} className='flex flex-row items-center justify-center'><p>Services</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+</svg>
+</Navlink>
+</li>
+            <li className='mb-6 font-bold text-lg w-full'><NavLink to={"/services"} className='flex flex-row items-center justify-center'><p>Services</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
-</svg></Navlink></li>
-            <li className='mb-6 font-bold text-lg flex'><Navlink to={'/work'} className='flex flex-row items-center justify-center'><p>Work</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+</svg></NavLink></li>
+            <li className='mb-6 font-bold text-lg flex'><NavLink to={'/work'} className='flex flex-row items-center justify-center'><p>Work</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
-</svg></Navlink></li>
-            <li className='mt-6 font-bold text-base flex'><Navlink href="/auth" className='flex flex-row items-center justify-center'><p>Login</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+</svg></NavLink></li>
+            <li className='mt-6 font-bold text-base flex'><NavLink href="/auth" className='flex flex-row items-center justify-center'><p>Login</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
-</svg></Navlink></li>
+</svg></NavLink></li>
           </ul>
 
 
