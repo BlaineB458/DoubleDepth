@@ -7,7 +7,7 @@ const ServicesPage = () => {
   const { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0,1], ['-0%','-40%']);
   return (
-    <section className='w-full flex items-center flex-col h-[300vh] overflow-hidden' >
+    <section className='w-full flex items-center flex-col min-h-[300vh] overflow-hidden' >
       <motion.img src="/thermfat.png" alt="" className='absolute -z-20 min-h-[600vh] w-full blur-[5px]'  style={{y}} />
       <div className="flex flex-col justify-center items-center max-w-3xl mt-20">
         <div className='flex flex-col min-h-[60vh] justify-center items-center text-left'>
