@@ -5,7 +5,7 @@ const ServicesPage = () => {
   return (
     <section className='w-full flex items-center flex-col min-h-[300vh] overflow-hidden' >
       <img src="/thermfat.png" alt="" className='absolute -z-20 min-h-[500vh] md:min-h-[300vh] w-full blur-[5px]' />
-      <div className="flex flex-col justify-center items-center max-w-3xl mt-28">
+      <div className="flex flex-col justify-center items-center max-w-3xl mt-36">
         <div className='flex flex-col min-h-[60vh] justify-center items-center text-left'>
         <h1 className='font-extrabold text-[40px]'>Cinematography</h1>
         <p className='mt-8 font-bold text-center md:text-center text-zinc-100/80 pt-2 pl-4'>We are a team of highly skilled and passionate filmmakers dedicated to capturing your vision and bringing it to life on the screen. We understand the power of visual storytelling and strive to create stunning visuals that leave a lasting impact on your audience.</p>
