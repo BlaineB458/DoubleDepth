@@ -8,8 +8,7 @@ import userVerification from './middlewares/AuthMiddleware.js';
 import path from 'path'
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const rootPath = process.cwd();
 
 dotenv.config();
 
@@ -62,13 +61,13 @@ app.use(cors({
     }
   });
 
-  app.use(express.static(path.join(__dirname, 'client', 'dist')));
+  app.use(express.static(path.join(rootPath, '..', 'client', 'dist')));
 
 app.use(authRoutes);
 app.use('/admin', userVerification, projectRoutes);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+  res.sendFile(path.join(rootPath, '..' , 'client', 'dist', 'index.html'));
 });
 
 app.listen(8081, () => {
