@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser'
 import dotenv from 'dotenv';
 import userVerification from './middlewares/AuthMiddleware.js';
+import path from 'path'
 
 dotenv.config();
 
@@ -57,8 +58,14 @@ app.use(cors({
     }
   });
 
+  app.use(express.static(path.join('client', 'dist')));
+
 app.use(authRoutes);
 app.use('/admin', userVerification, projectRoutes);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join('client', 'dist', 'index.html'));
+});
 
 app.listen(8081, () => {
     connect();
