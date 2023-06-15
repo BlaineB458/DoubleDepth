@@ -61,13 +61,11 @@ app.use(cors({
     }
   });
 
-  app.use(express.static(path.join(rootPath, '..', 'client', 'dist')));
-
 app.use(authRoutes);
 app.use('/admin', userVerification, projectRoutes);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(rootPath, '..' , 'client', 'dist', 'index.html'));
+  res.sendFile(path.join(rootPath, '../client/dist/index.html'));
 });
 
 app.listen(8081, () => {
