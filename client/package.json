@@ -16,6 +16,8 @@
     "@mui/material": "^5.13.2",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
+    "email-js": "^2.0.2",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^10.12.16",
     "js-cookie": "^3.0.5",
     "localforage": "^1.10.0",

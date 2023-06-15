@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Footer, Login, Navbar } from './components/index.js'
+import { Footer, Login, Navbar, EmailContactForm } from './components/index.js'
 import { Home, Services, Work, Auth, AuthProject } from './components/pages'
 import { Navigate, Route, Routes, useLocation} from 'react-router-dom'
 import { login, setAuthStatus } from './redux/userSlice';
@@ -52,6 +52,7 @@ const App = () => {
     <Navbar/>
     <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/contact' element={<EmailContactForm/>} />
         <Route path='/services' element={<Services/>} />
         <Route path='/work' element={<Work/>} />
         <Route path='/auth' element={<Auth/>} />

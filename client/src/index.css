@@ -22,7 +22,6 @@ html{
 
   background-color: #09090b;
   background-size: cover;
-  min-height: 200vh;
 }
 
 @media (min-width: 767px) {
