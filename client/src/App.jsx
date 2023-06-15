@@ -3,15 +3,23 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Footer, Login, Navbar } from './components/index.js'
 import { Home, Services, Work, Auth, AuthProject } from './components/pages'
-import { Navigate, Route, Routes} from 'react-router-dom'
+import { Navigate, Route, Switch, useLocation} from 'react-router-dom'
 import { login, setAuthStatus } from './redux/userSlice';
 import { useDispatch } from 'react-redux';
+import { animateScroll as scroll } from 'react-scroll';
 
 const App = () => {
 
   const [admin,setAdmin] = useState(false);
 
   const dispatch = useDispatch()
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // Scroll to the top of the page instantly when the route changes
+    scroll.scrollToTop({ duration: 0 });
+  }, [pathname]);
 
   useEffect(() => {
     // Perform user authentication check on component mount
@@ -42,7 +50,7 @@ const App = () => {
   return (
     <div className='overflow-hidden relative'>
     <Navbar/>
-    <Routes>
+    <Switch>
         <Route path='/' element={<Home/>} />
         <Route path='/services' element={<Services/>} />
         <Route path='/work' element={<Work/>} />
@@ -51,7 +59,7 @@ const App = () => {
         path="/admin-projects"
         element={ admin ? <AuthProject/> : <Navigate to='/work'/>}/>
         <Route path="*" element={<Home />} />
-    </Routes>
+    </Switch>
     <Footer/>
     </div>
   )

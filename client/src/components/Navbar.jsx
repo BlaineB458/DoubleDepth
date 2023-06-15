@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../redux/userSlice';
 import { useNavigate } from 'react-router-dom';
@@ -37,11 +37,11 @@ const Navbar = () => {
   return (
     <div className={`flex justify-center w-full items-center top-0 fixed p-2 z-30 backdrop-blur-[3px] ${isOpen ? 'flex-col':'flex-row'}`}>
        <nav className={`min-w-[80%] flex py-2 ${isOpen ? 'justify-end':'justify-between'} items-center`} >
-      <NavLink to={'/'} className={`${isOpen ? 'hidden' : 'block'}`} >
+      <Link to={'/'} className={`${isOpen ? 'hidden' : 'block'}`} >
       <div className="flex items-center justify-center">
          <img src="/pnglogo.png" alt="double depth logo" className='h-[50px] mr-2'/>
       </div>
-      </NavLink>
+      </Link>
 
       <div className="flex md:hidden">
         <button
@@ -82,22 +82,22 @@ const Navbar = () => {
       <ul className='hidden md:block md:flex items-center justify-center'>
         <li className='ml-8'>
 
-            <NavLink to={'/services'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>Services</p></NavLink>
+            <Link to={'/services'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>Services</p></Link>
             
 
         </li>
         <li className='ml-8'>
-        <NavLink to={'/work'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>Work</p></NavLink>
+        <Link to={'/work'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>Work</p></Link>
        
         </li>
         <li className='ml-8'>
            {!auth ?          
-              <NavLink to={'/auth'} className='group'>
+              <Link to={'/auth'} className='group'>
             <button className='px-6 py-2 rounded-full group-hover:border-zinc-100/50 border-zinc-100 border-[1px] flex flex-row justify-center'>
                 <p className="text-[14px] font-extrabold group-hover:text-zinc-100/50">Login</p>
                 <TrendingFlatIcon className='ml-2 group-hover:text-zinc-100/50 group-hover:fill-zinc-100/50'/>
               </button>
-             </NavLink>
+             </Link>
              :
 
             <button onClick={handleLogout} className='group px-6 py-2 rounded-full bg-zinc-100 group-hover:bg-zinc-100/50 flex flex-row justify-center'>
@@ -108,11 +108,11 @@ const Navbar = () => {
           </li>
           {auth && isAdmin &&
             <li>
-              <NavLink to={'/admin-projects'} className='group'>
+              <Link to={'/admin-projects'} className='group'>
             <button className='group bg-gradient-to-r from-[#42baff] to-[#0689d5] px-6 py-2 rounded-full flex flex-row justify-center'>
                 <p className="text-[14px] font-extrabold group-hover:text-zinc-100/50">Admin</p>
               </button>
-             </NavLink>
+             </Link>
             </li>
 
           } 
@@ -124,22 +124,22 @@ const Navbar = () => {
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} flex flex-col min-h-[30vh] justify-around backdrop-blur-3xl top-0 w-screen z-40`}>
         <aside>
           <ul className='flex flex-col justify-center items-center h-full'>
-            <li className='mb-6 font-bold text-lg w-full'><NavLink to={'/'} className='flex flex-row items-center justify-center'>
+            <li className='mb-6 font-bold text-lg w-full'><Link to={'/'} className='flex flex-row items-center justify-center'>
               <p>Home</p>
               <svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
 </svg>
-</NavLink>
+</Link>
 </li>
-            <li className='mb-6 font-bold text-lg w-full'><NavLink to={"/services"} className='flex flex-row items-center justify-center'><p>Services</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <li className='mb-6 font-bold text-lg w-full'><Link to={"/services"} className='flex flex-row items-center justify-center'><p>Services</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
-</svg></NavLink></li>
-            <li className='mb-6 font-bold text-lg flex'><NavLink to={'/work'} className='flex flex-row items-center justify-center'><p>Work</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+</svg></Link></li>
+            <li className='mb-6 font-bold text-lg flex'><Link to={'/work'} className='flex flex-row items-center justify-center'><p>Work</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
-</svg></NavLink></li>
-            <li className='mt-6 font-bold text-base flex'><NavLink href="/auth" className='flex flex-row items-center justify-center'><p>Login</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+</svg></Link></li>
+            <li className='mt-6 font-bold text-base flex'><Link href="/auth" className='flex flex-row items-center justify-center'><p>Login</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
-</svg></NavLink></li>
+</svg></Link></li>
           </ul>
 
 
