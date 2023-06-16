@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import { useNavigate } from 'react-router-dom';
 
 const EmailContactForm = () => {
  const form = useRef();
+ const navigate = useNavigate();
 
  const sendEmail = (e) => {
    e.preventDefault(); // prevents the page from reloading when you hit “Send”
@@ -15,6 +17,9 @@ const EmailContactForm = () => {
          // show the user an error
          console.log(error);
      });
+
+     navigate('/');
+
  };
 
  return (
