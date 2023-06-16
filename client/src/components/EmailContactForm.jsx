@@ -38,7 +38,7 @@ const EmailContactForm = () => {
      </div>
      <div className="flex flex-col mb-4 w-[60%]">
      <label className="font-extrabold mb-2">Message</label>
-     <textarea name="message" placeholder='Your question about our services...' className="bg-zinc-800/50 rounded-xl px-4 py-2 focus:outline-none focus:stroke-none shadow-md text-xs resize-none w-full"/>
+     <textarea name="message" className="bg-zinc-800/50 rounded-xl px-4 py-2 focus:outline-none focus:stroke-none shadow-md text-xs resize-none w-full"/>
      </div>
      <input type="submit" value="Send" className="bg-zinc-100/30 mt-4 px-6 py-2 rounded-full shadow-md hover:bg-zinc-100 hover:text-zinc-800" />
    </form>
