@@ -9,8 +9,8 @@ const Home = () => {
 
   return (
     <section className='flex flex-col pb-[30vh]'>
-     <motion.img src="/thermfat.png" alt="" className='absolute -z-20 hidden md:block md:min-h-[650vh] blur-[5px]'  style={{y}} />
-     <motion.img src="/mobilebg.jpeg" alt="" className='absolute md:hidden min-h-[700vh] -z-20 blur-[5px]'  style={{y}} />
+     <motion.img src="/thermfat.png" alt="" className='absolute -z-20 hidden md:block md:min-h-[700vh] blur-[5px]'  style={{y}} />
+     <motion.img src="/mobilebg.jpeg" alt="" className='absolute md:hidden min-h-[800vh] -z-20 blur-[5px]'  style={{y}} />
     <Hero/>
     <HomeServices/>
     </section>
