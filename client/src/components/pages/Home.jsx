@@ -8,12 +8,12 @@ const Home = () => {
   let y = useTransform(scrollYProgress, [0,1], ['-30%','-70%']);
 
   return (
-    <div>
-     <motion.img src="/thermfat.png" alt="" className='absolute -z-20 hidden md:block md:min-h-[550vh] w-[] blur-[5px]'  style={{y}} />
-     <motion.img src="/MobileDDBG.png" alt="" className='absolute block md:hidden min-w-[1000px] -right-20 -z-20 min-h-[600vh] md:min-h-[600vh] w-full blur-[5px]'  style={{y}} />
+    <section className='flex flex-col pb-[30vh]'>
+     <motion.img src="/thermfat.png" alt="" className='absolute -z-20 hidden md:block md:min-h-[650vh] blur-[5px]'  style={{y}} />
+     <motion.img src="/mobilebg.jpeg" alt="" className='absolute md:hidden min-h-[700vh] -z-20 blur-[5px]'  style={{y}} />
     <Hero/>
     <HomeServices/>
-    </div>
+    </section>
   )
 }
 
