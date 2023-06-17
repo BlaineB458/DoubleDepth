@@ -133,7 +133,7 @@ const Navbar = () => {
             <li className='mb-6 font-bold text-lg flex'><NavLink onClick={() => setIsOpen(!isOpen)}  to={'/work'} className='flex flex-row items-center justify-center'><p>Work</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
   <path d="M6 16l8-8-8-8" />
 </svg></NavLink></li>
-            <li className='mt-6 font-bold text-base flex'><NavLink onClick={() => setIsOpen(!isOpen)}  href="/auth" className='flex flex-row items-center justify-center'>   <button className='px-6 py-2 rounded-full group-hover:border-zinc-100/50 border-zinc-100 border-[1px] flex flex-row justify-center'>
+            <li className='mt-6 font-bold text-base flex'><NavLink onClick={() => setIsOpen(!isOpen)}  to={'/auth'} className='flex flex-row items-center justify-center'>   <button className='px-6 py-2 rounded-full group-hover:border-zinc-100/50 border-zinc-100 border-[1px] flex flex-row justify-center'>
                 <p className="text-[14px] font-extrabold group-hover:text-zinc-100/50">Login</p>
                 <TrendingFlatIcon className='ml-2 group-hover:text-zinc-100/50 group-hover:fill-zinc-100/50'/>
               </button></NavLink></li>
