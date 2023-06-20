@@ -29,6 +29,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.11.2",
     "react-scroll": "^1.8.9",
+    "react-useanimations": "^2.10.0",
     "redux": "^4.2.1",
     "sort-by": "^1.2.0"
   },

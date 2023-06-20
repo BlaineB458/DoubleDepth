@@ -39,7 +39,7 @@ const Navbar = () => {
        <nav className={`min-w-[80%] flex py-2 justify-between items-center`} >
       <NavLink to={'/'} onClick={() => setIsOpen(false)}>
       <div className="flex items-center justify-center">
-         <img src="/pnglogo.png" alt="double depth logo" className='h-[50px] mr-2'/>
+         <img src="/pnglogo.webp" alt="double depth logo" className='h-[50px] mr-2'/>
       </div>
       </NavLink>
 
