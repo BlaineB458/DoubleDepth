@@ -14,7 +14,7 @@ const Footer = () => {
 
           </div>
       <div className="flex flex-col justify-center items-center">
-        <img src="/pnglogo.png" alt="" className='h-[60px]' />
+        <img src="/pnglogo.webp" alt="" className='h-[60px]' />
           <p className='text-xs font-bold select-none mt-4'>&#169; 2023 <strong className='text-xs font-black'>DOUBLE DEPTH</strong></p>
       </div>
       <div className='flex justify-center items-center'>
