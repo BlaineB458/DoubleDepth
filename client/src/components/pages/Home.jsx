@@ -17,7 +17,7 @@ const Home = () => {
         style={{ y: y }}
       />
       <motion.img
-        src="/mobilebg.webp"
+        src="/backgroundmobile.webp"
         alt=""
         className='absolute block md:hidden min-h-[800vh] -z-20 blur-[5px]'
         style={{ y: mobileY}}
