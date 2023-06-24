@@ -19,7 +19,7 @@ const Home = () => {
       <motion.img
         src="/mobilebg.webp"
         alt=""
-        className='absolute md:hidden min-h-[800vh] -z-20 blur-[5px]'
+        className='absolute block md:hidden min-h-[800vh] -z-20 blur-[5px]'
         style={{ y: mobileY  }}
       />
       <Hero />
