@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
-  const isMobile = window.innerWidth <= 768; // Adjust the breakpoint as needed
   const y = useTransform(scrollYProgress, [0, 1], ['-0%', '-63%']);
   const mobileY = useTransform(scrollYProgress, [0, 1], ['-30%', '-70%']);
 
@@ -15,13 +14,13 @@ const Home = () => {
         src="/thermfat.webp"
         alt=""
         className='absolute -z-20 hidden md:block md:min-h-[700vh] blur-[5px]'
-        style={{ y: isMobile ? mobileY : y }}
+        style={{ y: y }}
       />
       <motion.img
         src="/mobilebg.webp"
         alt=""
         className='absolute md:hidden min-h-[800vh] -z-20 blur-[5px]'
-        style={{ y: isMobile ? mobileY : y }}
+        style={{ y: mobileY  }}
       />
       <Hero />
       <HomeServices />
