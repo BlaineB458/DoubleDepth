@@ -9,9 +9,10 @@ const CookieAlert = () => {
         if (!localStorage.getItem('consent')) {
             setTimeout(() => setShowAlert(true), 1000);
             
+        }else if(localStorage.getItem('consent') == 'true'){
+            setShowAlert(false);
         }
 
-        return;
       })
 
     const handleConsent = () => {
