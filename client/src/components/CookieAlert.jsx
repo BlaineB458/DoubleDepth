@@ -12,7 +12,7 @@ const CookieAlert = () => {
         }
 
         return;
-    },[])
+      })
 
     const handleConsent = () => {
       setShowAlert(false);
