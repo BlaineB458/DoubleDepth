@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -33,10 +33,29 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isVisible = prevScrollPos > currentScrollPos;
+
+      setPrevScrollPos(currentScrollPos);
+      setVisible(isVisible);
+      setIsOpen(false);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
+
 
   return (
-    <div className={`flex justify-center w-full items-center top-0 fixed p-2 z-30 backdrop-blur-[3px] ${isOpen ? 'flex-col':'flex-row'}`}>
-       <nav className={`min-w-[80%] flex py-2 justify-between items-center`} >
+    <nav className={`flex flex-col justify-center top-0 items-center fixed left-0 transition-all w-full duration-700 ease-in-out ${
+      visible ? 'opacity-100' : 'opacity-0 pointer-events-none -top-[100px]'
+    } p-2 z-30 backdrop-blur-[3px]`}>
+       <div className={`min-w-[80%] flex py-2 justify-between items-center`} >
       <NavLink to={'/'} onClick={() => setIsOpen(false)}>
       <div className="flex items-center justify-center">
          <img src="/pnglogo.webp" alt="double depth logo" className='h-[50px] mr-2'/>
@@ -44,42 +63,30 @@ const Navbar = () => {
       </NavLink>
 
       <div className="flex md:hidden">
-        <button
-          type="button"
-          className="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300"
-          onClick={toggleMenu}
+      <button
+        className="p-2 focus:outline-none"
+        onClick={toggleMenu}
         >
-          <svg
-            className={`h-6 w-6 ${isOpen ? 'hidden' : 'block'}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-          <svg
-            className={`h-6 w-6 ${isOpen ? 'block' : 'hidden'}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
+        <span
+          className={`block w-6 h-[2px] my-[2px] transition-all bg-zinc-50 transform ${
+            isOpen ? 'rotate-45 translate-y-[4px]' : '-translate-y-1'
+          }`}
+          ></span>
+        <span
+          className={`block w-6 h-[2px] my-[2px] transition-all bg-zinc-50 ${
+            isOpen ? 'opacity-0' : ''
+          }`}
+          ></span>
+        <span
+          className={`block w-6 h-[2px] my-[2px] transition-all bg-zinc-50 transform ${
+            isOpen ? '-rotate-45 -translate-y-[4px]' : 'translate-y-1'
+          }`}
+          ></span>
+          </button>
       </div>
 
 
-      <ul className='hidden md:block md:flex items-center justify-center'>
+      <ul className='hidden md:flex items-center justify-center'>
         <li className='ml-8'>
 
             <NavLink to={'/services'} className=" hover:cursor-pointer p-2"><p className='text-[14px] hover:text-[rgb(254,185,2)] hover:drop-shadow-[0_0_10px_rgb(241,116,46)] font-extrabold'>Services</p></NavLink>
@@ -120,8 +127,8 @@ const Navbar = () => {
       </ul>
 
 
-    </nav>
-      <motion.div className={`md:hidden ${isOpen ? 'block' : 'hidden'} flex flex-col min-h-[30vh] justify-around backdrop-blur-[3px]  top-0 w-screen z-40`}>
+    </div>
+      <div className={`md:hidden ${isOpen ? 'opacity-100 top-20' : 'opacity-0 pointer-events-none -top-[500px]'} absolute flex flex-col min-h-[30vh] backdrop-blur-md justify-around duration-300 ease-in-out w-screen`}>
         <aside>
           <ul className='flex flex-col justify-start items-center h-full'>
             <li className='mb-6 font-bold text-lg w-full'><NavLink onClick={() => setIsOpen(!isOpen)}  to={"/contact"} className='flex flex-row items-center justify-center'><p>Contact</p><svg className='mt-[5px] ml-2' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -142,8 +149,8 @@ const Navbar = () => {
 
         </aside>
 
-      </motion.div>
-    </div>
+      </div>
+    </nav>
       
       
       )

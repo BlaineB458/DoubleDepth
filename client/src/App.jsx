@@ -1,8 +1,8 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Footer, Login, Navbar, EmailContactForm } from './components/index.js'
-import { Home, Services, Work, Auth, AuthProject } from './components/pages'
+import { Footer, Login, Navbar, EmailContactForm, CookieAlert } from './components/index.js'
+import { Home, Services, Work, Auth, AuthProject, CookiePolicy, PrivacyPolicy } from './components/pages'
 import { Navigate, Route, Routes, useLocation} from 'react-router-dom'
 import { login, setAuthStatus } from './redux/userSlice';
 import { useDispatch } from 'react-redux';
@@ -49,19 +49,22 @@ const App = () => {
 
   return (
     <div className='overflow-hidden relative'>
-    <Navbar/>
     <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/contact' element={<EmailContactForm/>} />
         <Route path='/services' element={<Services/>} />
         <Route path='/work' element={<Work/>} />
         <Route path='/auth' element={<Auth/>} />
+        <Route path='/cookie-policy' element={<CookiePolicy/>} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy/>} />
           <Route
         path="/admin-projects"
         element={ admin ? <AuthProject/> : <Navigate to='/work'/>}/>
         <Route path="*" element={<Home />} />
     </Routes>
+        <Navbar/>
     <Footer/>
+    <CookieAlert/>
     </div>
   )
 }
