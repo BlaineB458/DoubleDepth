@@ -24,7 +24,7 @@ const CookieAlert = () => {
     return (
       <div>
     
-          <div className={`fixed z-[999px] left-5 w-[90vw] md:left-[25vw] md:w-[50vw] border-[0.5px] border-zinc-300/20 rounded-xl bottom-5 shadow-md bg-zinc-900/50 text-zinc-50 p-4 text-center backdrop-blur-sm transition-all ease-in-out duration-500 ${showAlert ? 'bottom-5' : 'hidden'}`}>
+          <div className={`fixed z-[999px] left-5 w-[90vw] md:left-[25vw] md:w-[50vw] border-[0.5px] border-zinc-300/20 rounded-xl shadow-md bg-zinc-900/50 text-zinc-50 p-4 text-center backdrop-blur-sm transition-all ease-in-out duration-500 ${showAlert ? 'bottom-5' : '-bottom-[40vh]'}`}>
             <p>
               We use cookies to enhance your experience on our website. <br/> By continuing to use this site, you consent to the
               use of cookies in accordance with our <br/> <NavLink className={'text-sky-500 font-medium cursor-pointer'} onClick={() => setShowAlert(false)} to={'/cookie-policy'}>Cookie Policy</NavLink>.
