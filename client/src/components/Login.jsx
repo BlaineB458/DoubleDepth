@@ -11,7 +11,7 @@ import checkmark from 'react-useanimations/lib/checkmark';
 const Login = () => {
 
   const [ username, setUsername ] = useState();
-  const [ success, setSuccess] = useState(true);
+  const [ success, setSuccess] = useState(false);
 
     const navigate = useNavigate();
     const [inputValue, setInputValue] = useState({
@@ -87,7 +87,6 @@ const Login = () => {
 
             {success && 
                 <div className='h-full w-full flex flex-col justify-center items-center '> 
-                <UseAnimations fillColor='#f4f4f5' loop={true} size={40} animation={checkmark} className='h-[40px] w-[40px]' />
                     <svg className='h-[40px] w-[40px] mb-8' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                     <h1 className=' text-[28px] font-bold'>Welcome back <span>{username}</span></h1>
                 </div>

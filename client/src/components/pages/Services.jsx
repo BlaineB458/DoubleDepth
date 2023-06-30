@@ -4,7 +4,7 @@ const ServicesPage = () => {
 
   return (
     <section className='w-full flex justify-center items-center md:justify-start flex-col min-h-[350vh] pb-20 md:min-h-[250vh] px-8' >
-      <img src="/bg6.jpeg" alt="" className='absolute -z-20 min-h-[650vh] bottom-[15vh] md:right-0 md:w-[3000px] blur-[5px]' />
+      <img src="/bgservice.webp" alt="" className='absolute -z-20 min-h-[650vh] bottom-[15vh] md:right-0 md:w-[3000px] blur-[5px]' />
       <div className="flex flex-col justify-center items-center max-w-3xl mt-36">
         <div className='flex flex-col min-h-[60vh] justify-center items-center text-center'>
         <h1 className='font-extrabold text-[32px] md:text-[40px]'>Cinematography</h1>

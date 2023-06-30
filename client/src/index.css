@@ -20,13 +20,13 @@
 
 html{
 
-  background-color: #09090b;
+  background-color: #0E2239;
   background-size: cover;
   
 }
 
 @media (min-width: 767px) {
   html{
-    background-color: #09090b;
+    background-color: #0E2239;
   }
 }

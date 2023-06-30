@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const CookiePolicy = () => {
   return (
-    <section className='flex flex-col pb-[30vh] pt-40 md:pb-0 min-h-[20vh] md:min-h-[150vh] text-left md:px-[20vw] '>
+    <section className='flex flex-col px-10 pb-[30vh] pt-40 min-h-[20vh] text-left md:px-[20vw] '>
       <h1 className='font-extrabold text-center text-[32px] md:text-[40px]'>Our Cookie Policy</h1>
       <p className='mt-8 font-bold text-zinc-100/80 text-center mb-16 '>Effective Date: 28 June 2023</p>
       <h2 className='my-4 font-bold text-zinc-50 text-[30px]'>What are Cookies?</h2>

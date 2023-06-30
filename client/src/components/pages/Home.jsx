@@ -11,15 +11,15 @@ const Home = () => {
   return (
     <section className='flex flex-col pb-[30vh] md:pb-0 h-[250vh] md:h-[250vh]'>
       <motion.img
-        src="/thermfat.webp"
+        src="/bgblue.webp"
         alt=""
-        className='absolute -z-20 hidden md:block md:min-h-[700vh] blur-[5px]'
+        className='absolute -z-20 hidden md:block md:min-h-[700vh] blur-[14px]'
         style={{ y: y }}
       />
       <motion.img
-        src="/backgroundmobile.webp"
+        src="/bgblue.webp"
         alt=""
-        className='absolute block md:hidden min-h-[800vh] -z-20 blur-[5px]'
+        className='absolute block md:hidden min-h-[800vh] -z-20 blur-[14px]'
         style={{ y: mobileY}}
       />
       <Hero />
